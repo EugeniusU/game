@@ -1,0 +1,16 @@
+var legend = JSON.stringify(
+{
+  "1": "story 1",
+  "2": "story 2",
+  "10": {"story": "some text", "goto": 23},
+  "17": {"story": "some text", "goto": 69},
+  "20": {"story": "some text", "goto": 32},
+  "27": {"story": "some text", "goto": 41},
+  "28": {"story": "some text", "goto": 50},
+  "37": {"story": "some text", "goto": 66},
+  "45": {"story": "some text", "goto": 67},
+  "46": {"story": "some text", "goto": 62},
+  "54": {"story": "some text", "goto": 68},
+  "60": {"story": "123", "goto": 61}
+}
+);
