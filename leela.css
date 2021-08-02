@@ -1,0 +1,89 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.game {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.field {
+    position: absolute;
+//    width: 95%;
+    height: 95%;
+//    margin: 2%;
+    margin-top: 1%;
+}
+
+.img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+/*    position: relative; */
+}
+
+.wrap {
+    position: absolute;
+//    width: 95%;
+    height: 95%;
+//    margin: 2%;
+    margin-top: 1%;
+}
+
+.fieldGrid {
+    position: absolute;
+/*    position: relative; */
+/*    left: 9.5%;
+    top: 17.5%;*/
+    display: flex;
+    flex-direction: column;
+/*    width: 91.5%;
+    height: 82.5%;*/
+/*    margin-right: 9.5%;
+    margin-bottom: 17.5%;
+    width: 100%;
+    height: 100%;
+    right: 9.5%;
+    bottom: 17.5%;*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.str {
+    display: flex;
+    width: 100%;
+    height: 8.87%;
+/*    left: 9.5%;
+    top: 17.5%;*/
+    margin-left: 9.5%;
+}
+
+.str:first-child {
+    margin-top: 17.5%;
+}
+
+.node {
+    box-sizing: border-box;
+    border: 1px solid green;
+/*    width: 11.1%;*/
+    width: 8.88%;
+//    height: 8.8%;
+}
+
+.btn, .legend {
+    display: none;
+}
+
+.btn {
+    position: absolute;
+    top: 30px;
+}
+
