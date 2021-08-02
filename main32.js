@@ -299,4 +299,43 @@ function showLegend() {
 ///showBtn(btnDiv);
 
 
+if (window.innerWidth < window.innerHeight) {
+    field.style.width = '95%';
+    field.style.height = '';
+    console.log(1);
 
+    console.log(field.style.width + 'w', field.style.height + 'h');
+} else {
+    field.style.width = '';
+    field.style.height = '95%';
+    console.log(2);
+
+    console.log(field.style.width + 'w', field.style.height + 'h');
+}
+
+console.log(window.innerWidth, window.innerHeight);
+
+window.addEventListener('orientationchange', event => {
+    console.log(event);
+    if (window.innerWidth < window.innerHeight) {
+        field.style.width = '95%';
+        field.style.height = '';
+        console.log(1);
+
+        console.log(field.style.width + 'w', field.style.height + 'h');
+    } else {
+        field.style.width = '';
+        field.style.height = '95%';
+        console.log(2);
+
+        console.log(field.style.width + 'w', field.style.height + 'h');
+    }
+
+    img.style.objectFit = 'contain';
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectPosition = 'center';
+
+    game.style.width = '100%';
+    game.style.height = '100%';
+})
