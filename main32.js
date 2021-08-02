@@ -372,6 +372,7 @@ button.addEventListener('click', event => {
 
     if (nodeNow) {
         nextNode(arrays, nodeNow, numberNow);
+        nodeNow.click();
     }
     console.log(nodeNow, numberNow);
 })
