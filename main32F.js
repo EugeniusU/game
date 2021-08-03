@@ -226,7 +226,7 @@ for (let array of f.arrays) {
 ///    for (let node of f.arrays) {
     for (let node of array) {
 //        console.log(node);
-        applyEvent(node, test);
+    applyEvent(node, test);
     }
 }
 
@@ -253,13 +253,13 @@ function test(event, prevNode) {
                 nodeNext.node.style.background = 'pink';
                 event.target.style.background = '';
             }, 1000);
-            /*
-                        setTimeout(() => {
-                            console.log(story.story);
-                            legendContent.innerHTML = story.story;
-                            showLegendDiv();
-                        }, 2000);
-            */
+/*
+            setTimeout(() => {
+                console.log(story.story);
+                legendContent.innerHTML = story.story;
+                showLegendDiv();
+            }, 2000);
+*/
             nodeNext.node.style.background = 'deeppink';
             nodeNow = nodeNext.node;
 ///            prevNode.style.background = '';
@@ -275,7 +275,8 @@ function test(event, prevNode) {
         if (story && story.story) {
             legendContent.innerHTML = story.story;
         } else {
-            legendContent.innerHTML = 'some text this';
+//            legendContent.innerHTML = 'some text this';
+            legendContent.innerHTML = 'сообщение для игрока';
         }
 ///        showLegendDiv();
     }, 2000);
@@ -349,7 +350,7 @@ window.addEventListener('orientationchange', event => {
     console.log(event);
     setTimeout(() => {
         if (window.innerWidth < window.innerHeight) {
-            field.style.width = '95%';
+        field.style.width = '95%';
 //            field.style.width = '';
             field.style.height = '';
             console.log(1);
@@ -408,7 +409,7 @@ const startNum = 6;
 function startGame() {
     if (!state) {
 ///        alert(`Должно выпасть число ${startNum}`);
-        showBtn(btnDiv);
+            showBtn(btnDiv);
 
 
         if (!numberNow || numberNow != startNum) {
@@ -454,11 +455,11 @@ function nextNode(arraysOfNodes, currentNode, num) {
     console.log(currentNode);
 
 ///    showLegend(legendDiv, nodeNow);
-    /*
-        setTimeout(() => {
-            showLegend(legendDiv, legendContent, nodeNow);
-        }, 2000);
-     */
+/*
+    setTimeout(() => {
+        showLegend(legendDiv, legendContent, nodeNow);
+    }, 2000);
+ */
 }
 
 function getNodeByNum(arraysOfNodes, num) {
@@ -592,3 +593,22 @@ showLegendButton.addEventListener('click', event => {
 
 console.log(field.getBoundingClientRect().width / 100 * 8);
 
+btnDiv.style.left = fieldGrid.getBoundingClientRect().x + fieldGrid.getBoundingClientRect().width * 20 / 100 + 'px';
+showLegendButton.style.top = field.getBoundingClientRect().y + field.getBoundingClientRect().height * 95 / 100 + 'px';
+
+///showLegendButton.style.left = fieldGrid.getBoundingClientRect().x + fieldGrid.getBoundingClientRect().width * 35 / 100 + 'px';
+
+console.log(fieldGrid.getBoundingClientRect().x);
+/*
+if (window.innerWidth < window.innerHeight) {
+//    showLegendButton.style.fontSize = '2em';
+    showLegendButton.style.fontSize = '3vh';
+} else {
+//    showLegendButton.style.fontSize = '1em';
+    showLegendButton.style.fontSize = '2vh';
+}
+*/
+let w2 = window.innerWidth * 3 / 100;
+showLegendButton.style.fontSize = w2 + 'px';
+
+console.log(w2);
