@@ -594,21 +594,21 @@ showLegendButton.addEventListener('click', event => {
 console.log(field.getBoundingClientRect().width / 100 * 8);
 
 btnDiv.style.left = fieldGrid.getBoundingClientRect().x + fieldGrid.getBoundingClientRect().width * 20 / 100 + 'px';
-showLegendButton.style.top = field.getBoundingClientRect().y + field.getBoundingClientRect().height * 95 / 100 + 'px';
+///showLegendButton.style.top = field.getBoundingClientRect().y + field.getBoundingClientRect().height * 95 / 100 + 'px';
 
-///showLegendButton.style.left = fieldGrid.getBoundingClientRect().x + fieldGrid.getBoundingClientRect().width * 35 / 100 + 'px';
+//showLegendButton.style.left = fieldGrid.getBoundingClientRect().x + fieldGrid.getBoundingClientRect().width * 35 / 100 + 'px';
 
 console.log(fieldGrid.getBoundingClientRect().x);
-/*
-if (window.innerWidth < window.innerHeight) {
-//    showLegendButton.style.fontSize = '2em';
-    showLegendButton.style.fontSize = '3vh';
-} else {
-//    showLegendButton.style.fontSize = '1em';
-    showLegendButton.style.fontSize = '2vh';
-}
-*/
-let w2 = window.innerWidth * 3 / 100;
-showLegendButton.style.fontSize = w2 + 'px';
 
+let w2 = window.innerWidth * 2 / 100;
+showLegendButton.style.fontSize = w2 + 'px';
+//showLegendButton.style.width = w2 + 'px';
+//showLegendButton.style.fontSize = '2vh';
+
+//showLegendButton.style.height = window.innerHeight * 5 / 100 + 'px';
+///showLegendButton.style.left = '39%';
 console.log(w2);
+
+let one = document.querySelector('.one');
+
+one.style.top = field.getBoundingClientRect().y + field.getBoundingClientRect().height * 92 / 100 + 'px';
