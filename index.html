@@ -3,34 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="leela.css">
+    <link rel="stylesheet" href="leela2.css">
 </head>
 <body>
 
-<div class="game">
+div class="game">
     <div class="field">
         <img class="img" src="leela.jpg">
         <div class="fieldGrid"></div>
     </div>
-    <!--
-    <div class="wrap">
-        <img class="img" src="leela.jpg">
-        <div class="fieldGrid"></div>
-    </div>
--->
+
     <div class="btn">
-        <button>Get number</button>
-        <span></span>
+        <canvas></canvas>
+        <span style="display: none"></span>
+        <div style="display: none">
         Показывать легенду
         <input type="checkbox" checked>
+        </div>
     </div>
+
     <div class="legend">
+        <img src="notes.jpg">
         <div class="content"></div>
         <button id="close">X</button>
     </div>
 </div>
 
-<script src="legend.json">
+<script src="legend2.js">
 </script>
 
 <script src="main32.js">
