@@ -377,28 +377,34 @@ function getNum() {
     return Math.floor(Math.random() * 6) + 1;
 }
 
+let showedLegend = false;
+
 button.addEventListener('click', event => {
-    numberNow = getNum();
-    span.textContent = numberNow;
+
+    if (showedLegend) {
+        showedLegend = false;
+        numberNow = getNum();
+        span.textContent = numberNow;
 
 ///    clearNumber(100, 100, 70, 70, 30);
 ///    drawNumber(100, 100, 70, 70, numberNow,30);
 
-    clearNumber(cube.width, cube.height, cube.x, cube.y, cube.sizeNum);
-    drawNumber(cube.width, cube.height, cube.x, cube.y, numberNow, cube.sizeNum);
+        clearNumber(cube.width, cube.height, cube.x, cube.y, cube.sizeNum);
+        drawNumber(cube.width, cube.height, cube.x, cube.y, numberNow, cube.sizeNum);
 
-    console.log(numberNow);
+        console.log(numberNow);
 
-    if (nodeNow) {
+        if (nodeNow) {
 //        nodeNow.click();
-        setTimeout(() => {
-            nextNode(arrays, nodeNow, numberNow);
-            //test(nodeNow);
-            nodeNow.click();
-        }, 2000);
+            setTimeout(() => {
+                nextNode(arrays, nodeNow, numberNow);
+                //test(nodeNow);
+                nodeNow.click();
+            }, 2000);
 ///        showLegend();
+        }
+        console.log(nodeNow, numberNow);
     }
-    console.log(nodeNow, numberNow);
 })
 
 let state = false;
@@ -414,6 +420,7 @@ function startGame() {
 
         if (!numberNow || numberNow != startNum) {
             while (numberNow != startNum) {
+                showedLegend = true;
                 button.click();
             }
         }
@@ -460,6 +467,9 @@ function nextNode(arraysOfNodes, currentNode, num) {
         showLegend(legendDiv, legendContent, nodeNow);
     }, 2000);
  */
+    if (next == 1) {
+        nodeNow.click();
+    }
 }
 
 function getNodeByNum(arraysOfNodes, num) {
@@ -494,6 +504,7 @@ closeButton.addEventListener('click', event => {
     clearNumber(cube.width, cube.height, cube.x, cube.y, cube.sizeNum);
 ///    show(field, false);
     show(btnDiv, true);
+    showedLegend = true;
 })
 
 isShowLegend.addEventListener('change', event => {
@@ -599,7 +610,15 @@ btnDiv.style.left = fieldGrid.getBoundingClientRect().x + fieldGrid.getBoundingC
 //showLegendButton.style.left = fieldGrid.getBoundingClientRect().x + fieldGrid.getBoundingClientRect().width * 35 / 100 + 'px';
 
 console.log(fieldGrid.getBoundingClientRect().x);
-
+/*
+if (window.innerWidth < window.innerHeight) {
+//    showLegendButton.style.fontSize = '2em';
+    showLegendButton.style.fontSize = '3vh';
+} else {
+//    showLegendButton.style.fontSize = '1em';
+    showLegendButton.style.fontSize = '2vh';
+}
+*/
 let w2 = window.innerWidth * 2 / 100;
 showLegendButton.style.fontSize = w2 + 'px';
 //showLegendButton.style.width = w2 + 'px';
